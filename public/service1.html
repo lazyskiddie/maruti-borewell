@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Listings</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #007bff; color: white; padding: 20px 0; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        .container { width: 80%; margin: 20px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .service-list { display: flex; flex-wrap: wrap; gap: 20px; }
+        .service-card { border: 1px solid #ccc; padding: 15px; width: 30%; box-shadow: 2px 2px 5px rgba(0,0,0,0.05); border-radius: 5px; }
+        .service-card h3 { color: #007bff; }
+        .service-card button { background-color: #28a745; color: white; border: none; padding: 8px 15px; margin-top: 10px; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="form.html">Inquiry</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Available Services</h2>
+        <div class="service-list" id="serviceList">
+            </div>
+    </div>
+
+    <script>
+        // Sample Service Data (from ERD: Service, Owner, Views)
+        const services = [
+            { id: 101, name: 'Plumbing Experts', desc: 'Fast and reliable plumbing repairs.', location: 'Downtown', ownerId: 1, views: 520 },
+            { id: 102, name: 'Web Design Studio', desc: 'Modern and responsive website development.', location: 'Uptown', ownerId: 2, views: 890 },
+            { id: 103, name: 'Gardening & Landscaping', desc: 'Transforming outdoor spaces beautifully.', location: 'Suburb', ownerId: 3, views: 310 }
+        ];
+
+        function loadServices() {
+            const listContainer = document.getElementById('serviceList');
+            services.forEach(service => {
+                const card = document.createElement('div');
+                card.className = 'service-card';
+                card.innerHTML = `
+                    <h3>${service.name}</h3>
+                    <p>${service.desc}</p>
+                    <p>Location: ${service.location} | Views: ${service.views}</p>
+                    <button onclick="viewDetails(${service.id})">View Details & Inquire</button>
+                `;
+                listContainer.appendChild(card);
+            });
+        }
+
+        function viewDetails(serviceId) {
+            // In a real application, this would load a detail view. 
+            // Here, we simulate linking to the inquiry form with the service context.
+            const service = services.find(s => s.id === serviceId);
+            if (service) {
+                alert(`Viewing details for: ${service.name}. Redirecting to Inquiry Form.`);
+                window.location.href = `form.html?serviceId=${serviceId}&serviceName=${encodeURIComponent(service.name)}`;
+            }
+        }
+
+        // Load the services when the page loads
+        window.onload = loadServices;
+    </script>
+</body>
+</html>

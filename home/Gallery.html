@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title> Gallery</title>
+        <style>
+         .top-nav {
+            display: flex;
+            width: 100%;
+            background-color: #26616e;
+        }
+
+        .top-nav a {
+            flex: 1;
+            text-align: center;
+            padding: 14px 0;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .top-nav a:hover {
+            background-color: #0e18db;
+        }
+        .hero {
+        text-align: center;
+        padding: 0px 20px;
+        background-color: #423ceb;
+        text-decoration: white;
+        }
+
+    .hero h1 {
+      font-size: 02.5em;
+      color: #333;
+    }
+
+    .hero p {
+      font-size: 1.em;
+      color: #555;
+    }
+
+    .gallery-section {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .caption {
+      opacity: 1;
+    }
+    footer {
+            text-align: center;
+            background-color: #26616e;
+            color: white;
+            padding: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <center><h1>Welcome to Maruti Borewell & Electric</h1></center>
+        <center><p>This is the home page of our website. Explore our services, view our gallery, or contact us for more information.</p></center>
+        <header>
+            <div class="top-nav">
+                <a href="../home/home.html">Home</a>
+                <a href="../home/Service.html">Services</a>
+                <a href="../home/Gallery.html">Gallery</a>
+                <a href="../home/Form.html">Contact Form</a>
+            </div>
+        </header>
+        <hr/>
+        <div class="container">
+            </div>
+            <section class="hero">
+    <center><h1 style="color: white;">Our Gallery</h1>
+    <p style="color: white;">Take a look at our completed projects and professional work in borewell and electrical services.</p></center><hr>
+  </section>
+
+  <section class="gallery-section">
+    <div class="gallery-item">
+      <img src="https://speedy.uenicdn.com/0618eaa2-2871-49c6-a9dc-6648c2e5715e/c1024_a/image/upload/v1547216634/service_images/shutterstock_719795347.jpg" alt="Project 1">
+      <div class="caption">Borewell Drilling Project</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://www.thewowstyle.com/wp-content/uploads/2020/04/1-52.jpg" alt="Project 2">
+      <div class="caption">Pump Installation Work</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://randwickelectrical.net.au/assets/electrical-wiring-scaled-1.jpg" alt="Project 3">
+      <div class="caption">Electrical Setup</div>
+    </div>
+    <div class="gallery-item">
+      <img src="http://5.imimg.com/data5/SELLER/Default/2021/8/DU/VG/YO/1869952/home-borewell-drilling-services-500x500.png" alt="Project 4">
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 Maruti Borewell & Electric. All rights reserved.</p>
+  </footer>
+        </div>
+    </body>
+</html>

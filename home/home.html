@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruti Borewell & Electric - Home</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        /* --- General Reset and Utility --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* --- Color Variables (From Why Choose Us section) --- */
+        :root {
+            --primary-blue: #007bff;
+            --dark-blue-icon: #1c62b9;
+            --text-dark: #212529;
+            --text-body: #6c757d;
+            --white: #fff;
+            
+            /* Colors from Maruti Borewell's initial code */
+            --borewell-nav-color: #26616e; 
+            --borewell-hero-color: #2d38d6cb;
+            --borewell-hover-color: #0e18db;
+        }
+
+        /* --- Layout Utility --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- Navigation Styles --- */
+        .top-nav {
+            display: flex;
+            width: 100%;
+            background-color: var(--borewell-nav-color);
+        }
+
+        .top-nav a {
+            flex: 1;
+            text-align: center;
+            padding: 14px 0;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--borewell-hover-color);
+        }
+        
+        /* --- Header/Intro Styles --- */
+        header.intro {
+            text-align: center;
+            padding: 20px 0 0;
+        }
+        
+        header.intro h1 {
+            font-size: 2em;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        
+        header.intro p {
+            font-size: 1em;
+            color: var(--text-body);
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        /* --- Hero Section Styles --- */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: var(--borewell-hero-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: white;
+            max-width: 600px;
+            margin: 10px auto 0;
+        }
+        
+        /* --- WHY CHOOSE US Section Styling --- */
+        .why-choose-us {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-body);
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .feature-item {
+            flex: 1;
+            max-width: 25%;
+            padding: 20px;
+        }
+
+        .feature-item h3 {
+            font-size: 1.25rem;
+            color: var(--text-dark);
+            margin: 20px 0 10px;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: var(--text-body);
+            max-width: 250px;
+            margin: 0 auto;
+        }
+
+        .icon-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, var(--primary-blue) 0%, var(--dark-blue-icon) 100%);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .icon {
+            font-size: 36px; 
+            line-height: 1;
+            transition: transform 0.3s;
+            filter: invert(100%);
+        }
+
+        /* --- Footer Styles --- */
+        footer {
+            text-align: center;
+            background-color: var(--borewell-nav-color);
+            color: white;
+            padding: 20px;
+        }
+        
+        /* --- Responsiveness --- */
+        @media (max-width: 992px) {
+            .features-grid {
+                flex-wrap: wrap; 
+                justify-content: center;
+            }
+
+            .feature-item {
+                max-width: 45%; 
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .features-grid {
+                flex-direction: column;
+            }
+
+            .feature-item {
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="intro">
+        <h1>Welcome to Maruti Borewell & Electric</h1>
+        <p>This is the home page of our website. Explore our services, view our gallery, or contact us for more information.</p>
+    </header>
+    
+    <nav class="top-nav">
+        <a href="../home/home.html">Home</a>
+        <a href="../home/Service.html">Services</a>
+        <a href="../home/Gallery.html">Gallery</a>
+        <a href="../home/Form.html">Contact Form</a>
+    </nav>
+    <br>
+    
+
+    <section class="hero">
+        <h1>Your Trusted Borewell Experts</h1>
+        <p>Providing reliable and efficient borewell services for your needs. Explore our solutions and get in touch with us today!</p>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="container">
+            <header class="section-header">
+                <h2>Why Choose Us?</h2>
+                <p>Experience the difference of working with true professionals</p>
+            </header>
+
+            <div class="features-grid">
+
+                <div class="feature-item">
+                    <div class="icon-circle">
+                        <span class="icon" aria-hidden="true">🏅</span> 
+                    </div>
+                    <h3>Certified Professionals</h3>
+                    <p>Our team consists of highly trained and certified technicians with years of expertise.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon-circle">
+                        <span class="icon" aria-hidden="true">🛡️</span>
+                    </div>
+                    <h3>Quality Guarantee</h3>
+                    <p>We use only premium equipment and materials, backed by comprehensive warranties.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon-circle">
+                        <span class="icon" aria-hidden="true">⏰</span>
+                    </div>
+                    <h3>Timely Service</h3>
+                    <p>We value your time. Projects completed on schedule with minimal disruption.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="icon-circle">
+                        <span class="icon" aria-hidden="true">👥</span>
+                    </div>
+                    <h3>Customer First</h3>
+                    <p>Transparent pricing, clear communication, and dedicated support throughout your project.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Maruti Borewell & Electric. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

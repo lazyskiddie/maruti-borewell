@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services - Maruti Borewell & Electric</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f7f9fc;
+        }
+
+        .top-nav {
+            display: flex;
+            width: 100%;
+            background-color: #26616e;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .top-nav a {
+            flex: 1;
+            text-align: center;
+            padding: 14px 0;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .top-nav a:hover {
+            background-color: #0e18db;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #21319cd6;
+            text-decoration-color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .services-section {
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service {
+            position: relative;
+            width: 320px;
+            height: 320px;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 8px 8px rgba(0,0,0,0.1);
+            border-radius: 20px;
+        }
+
+        .service img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .service .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(38, 97, 110, 0.8);
+            color: rgb(250, 247, 247);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            border-radius: 200px;
+        }
+
+        .service:hover img {
+            transform: scale(1.1);
+            filter: brightness(80%);
+        }
+
+        .service:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h3 {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #26616e;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <center><h1>Welcome to Maruti Borewell & Electric</h1></center>
+    <center><p>This is the home page of our website. Explore our services, view our gallery, or contact us for more information.</p></center>
+
+    <header>
+        <div class="top-nav">
+            <a href="../home/home.html">Home</a>
+            <a href="../home/Service.html">Services</a>
+            <a href="../home/Gallery.html">Gallery</a>
+            <a href="../home/Form.html">Contact Form</a>
+        </div>
+    </header><br><br>
+
+    <section class="hero">
+        <h1 style="color: white;">Our Services</h1>
+        <p style="color: white;">Explore the wide range of borewell and electrical services we offer with expertise and efficiency.</p>
+    </section>
+
+
+    <section class="services-section">
+        <div class="service">
+            <img src="https://speedy.uenicdn.com/0618eaa2-2871-49c6-a9dc-6648c2e5715e/c1024_a/image/upload/v1547216634/service_images/shutterstock_719795347.jpg" alt="Borewell Drilling">
+            <div class="overlay">
+                <center><h3>Borewell Drilling</h3>
+                <p>Expert drilling services using modern equipment for reliable water access solutions.</p></center>
+            </div>
+        </div>
+        <div class="service">
+            <img src="https://www.strongmanpumps.com.au/wp-content/uploads/2017/10/bore-pump-installation.jpg" alt="Pump Installation">
+            <div class="overlay">
+                <h3>Pump Installation</h3>
+                <p>Professional pump setup and maintenance to ensure optimal water supply performance.</p>
+            </div>
+        </div>
+        <div class="service">
+            <img src="https://www.unifyworld.com/images/blog/blog-post/blog-1-sept-4.jpg" alt="Maintenance Services">
+            <div class="overlay">
+                <h3>Maintenance Services</h3>
+                <p>Comprehensive maintenance to keep your borewell and electric systems running smoothly.</p>
+            </div>
+        </div>
+        <div class="service">
+            <img src="https://5.imimg.com/data5/SELLER/Default/2021/1/LR/ZI/CO/60261566/15-500x500.jpg" alt="Custom Solutions">
+            <div class="overlay">
+                <h3>Electrical Solutions</h3>
+                <p>Tailored solutions to meet your unique requirements for electric installations.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Maruti Borewell & Electric. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
