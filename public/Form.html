@@ -18,6 +18,24 @@
             border-radius: 15px;
         }
 
+        .form-head {
+            text-align: center;
+            padding: 20px 0 0;
+            margin-top: 5px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            background-color: rgb(20, 108, 114);
+        }
+        .form-head h1 {
+            font-size: 2em;
+            color: white;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 15px;
+        }
+
         h1 {
             text-align: center;
             color: #333;
@@ -93,8 +111,13 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
 </head>
 <body>
-    <center><h1>Welcome to Maruti Borewell & Electric</h1></center>
-        <center><p>This is the home page of our website. Explore our services, view our gallery, or contact us for more information.</p></center>
+    <section class="form-head">
+    <h1>Welcome to Maruti Borewell & Electric</h1>
+    </section>
+    <section class="def">
+        <h2>Contact us</h2>
+        <p>Fill out the form below to get in touch with us:</p>
+    </section>
         <header>
             <div class="top-nav">
                 <a href="../public/index.html">Home</a>
